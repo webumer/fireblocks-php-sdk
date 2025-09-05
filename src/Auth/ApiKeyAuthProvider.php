@@ -55,7 +55,7 @@ final class ApiKeyAuthProvider implements IAuthProvider
             'iat' => $now,
             'exp' => $now + 30, // 30 seconds expiration
             'sub' => $this->apiKey,
-            'bodyHash' => $body ? hash('sha256', json_encode($body)) : ''
+            'bodyHash' => $body ? hash('sha256', (string) json_encode($body)) : ''
         ];
 
         return JWT::encode($payload, $this->privateKey, 'RS256');

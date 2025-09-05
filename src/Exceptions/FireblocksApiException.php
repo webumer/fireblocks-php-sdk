@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Webumer\Fireblocks\Exceptions;
 
 use Exception;
+use Throwable;
 
 /**
  * Fireblocks API Exception
@@ -21,14 +22,14 @@ class FireblocksApiException extends Exception
      *
      * @param string $message The error message
      * @param int $code The error code
-     * @param Exception|null $previous The previous exception
+     * @param Throwable|null $previous The previous exception
      * @param array|null $responseData The API response data
      * @param int|null $httpStatusCode The HTTP status code
      */
     public function __construct(
         string $message = '',
         int $code = 0,
-        ?Exception $previous = null,
+        ?Throwable $previous = null,
         ?array $responseData = null,
         ?int $httpStatusCode = null
     ) {

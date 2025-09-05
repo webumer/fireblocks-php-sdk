@@ -111,4 +111,28 @@ final class FireblocksClient
     {
         return new self($authProvider, 'https://api.fireblocks.io', $options);
     }
+
+    /**
+     * Get the authentication provider
+     */
+    public function getAuthProvider(): IAuthProvider
+    {
+        return $this->authProvider;
+    }
+
+    /**
+     * Get the base URL
+     */
+    public function getBaseUrl(): string
+    {
+        return $this->baseUrl;
+    }
+
+    /**
+     * Get the configuration options
+     */
+    public function getOptions(): array
+    {
+        return $this->options;
+    }
 }

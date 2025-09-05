@@ -1,10 +1,8 @@
 parameters:
-    level: 8
+    level: 6
     paths:
         - src
     excludePaths:
         - tests
     ignoreErrors:
-        - '#Call to an undefined method#'
-    checkMissingIterableValueType: false
-    checkGenericClassInNonGenericObjectType: false
+        - '#no value type specified in iterable type#'

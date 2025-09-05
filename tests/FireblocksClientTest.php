@@ -10,6 +10,9 @@ use Webumer\Fireblocks\Auth\ApiKeyAuthProvider;
 
 class FireblocksClientTest extends TestCase
 {
+    /**
+     * @covers \Webumer\Fireblocks\FireblocksClient::__construct
+     */
     public function testCanCreateClient(): void
     {
         $authProvider = new ApiKeyAuthProvider('test-api-key', 'test-private-key');
@@ -18,6 +21,9 @@ class FireblocksClientTest extends TestCase
         $this->assertInstanceOf(FireblocksClient::class, $client);
     }
 
+    /**
+     * @covers \Webumer\Fireblocks\FireblocksClient::forSandbox
+     */
     public function testCanCreateSandboxClient(): void
     {
         $authProvider = new ApiKeyAuthProvider('test-api-key', 'test-private-key');
@@ -26,6 +32,9 @@ class FireblocksClientTest extends TestCase
         $this->assertInstanceOf(FireblocksClient::class, $client);
     }
 
+    /**
+     * @covers \Webumer\Fireblocks\FireblocksClient::forProduction
+     */
     public function testCanCreateProductionClient(): void
     {
         $authProvider = new ApiKeyAuthProvider('test-api-key', 'test-private-key');
@@ -34,6 +43,13 @@ class FireblocksClientTest extends TestCase
         $this->assertInstanceOf(FireblocksClient::class, $client);
     }
 
+    /**
+     * @covers \Webumer\Fireblocks\FireblocksClient::vaults
+     * @covers \Webumer\Fireblocks\FireblocksClient::transactions
+     * @covers \Webumer\Fireblocks\FireblocksClient::addresses
+     * @covers \Webumer\Fireblocks\FireblocksClient::webhooks
+     * @covers \Webumer\Fireblocks\FireblocksClient::assets
+     */
     public function testHasServiceMethods(): void
     {
         $authProvider = new ApiKeyAuthProvider('test-api-key', 'test-private-key');
