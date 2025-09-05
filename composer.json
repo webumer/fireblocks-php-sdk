@@ -6,8 +6,7 @@
     "keywords": ["fireblocks", "crypto", "blockchain", "digital-assets", "custody", "api", "sdk", "php"],
     "authors": [
         {
-            "name": "Webumer",
-            "email": "dev@webumer.com"
+            "name": "Umer Sulman"
         }
     ],
     "require": {
