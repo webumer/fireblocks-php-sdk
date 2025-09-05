@@ -1,0 +1,45 @@
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Dependencies
+vendor/
+node_modules/
+
+# Build artifacts
+build/
+dist/
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+
+# Coverage reports
+coverage/
+clover.xml
+
+# PHPUnit
+.phpunit.result.cache
+
+# Composer
+composer.lock
+
+# Reference files (not needed in production)
+js-sdk-reference/
+fireblocks-openapi.json
