@@ -86,6 +86,31 @@ final class VaultsService
     }
 
     /**
+     * Create a vault wallet for a specific asset
+     *
+     * @param string $vaultAccountId The vault account ID
+     * @param string $assetId The asset ID
+     * @return array Created vault wallet
+     */
+    public function createVaultWallet(string $vaultAccountId, string $assetId): array
+    {
+        return $this->apiClient->post("vault/accounts/{$vaultAccountId}/{$assetId}");
+    }
+
+    /**
+     * Create a deposit address for a vault wallet
+     *
+     * @param string $vaultAccountId The vault account ID
+     * @param string $assetId The asset ID
+     * @param array $options Optional address creation options
+     * @return array Created address details
+     */
+    public function createDepositAddress(string $vaultAccountId, string $assetId, array $options = []): array
+    {
+        return $this->apiClient->post("vault/accounts/{$vaultAccountId}/{$assetId}/addresses", $options);
+    }
+
+    /**
      * Get vault account assets
      *
      * @param string $vaultAccountId The vault account ID

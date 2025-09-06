@@ -1,5 +1,6 @@
 {
     "name": "webumer/fireblocks-php-sdk",
+    "version": "1.1.0",
     "description": "Unofficial PHP SDK for Fireblocks API - A secure digital asset custody and transfer platform",
     "type": "library",
     "license": "MIT",

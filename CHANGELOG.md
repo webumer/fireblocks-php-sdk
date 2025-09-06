@@ -7,19 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Added
-- Initial release of Fireblocks PHP SDK
-- JWT-based authentication
-- Vault management service
-- Transaction processing service
-- Address generation service
-- Webhook handling service
-- Asset information service
-- Sandbox and production environment support
+## [1.1.0] - 2025-01-06
 
-### Security
-- JWT token signing with private keys
-- Secure HTTP client implementation
+### Added
+- **Proper Vault Wallet Creation Flow**: Added `createVaultWallet()` method to VaultsService
+- **Deposit Address Creation**: Added `createDepositAddress()` method to VaultsService
+- **Two-Step Wallet Creation Process**: Following official Fireblocks documentation flow
+- **Enhanced API Compliance**: Updated to match official Fireblocks API endpoints
+
+### Changed
+- **Wallet Creation Flow**: Now follows proper two-step process (create vault wallet → create deposit address)
+- **API Endpoints**: Updated to use correct Fireblocks API endpoints
+- **Error Handling**: Improved granular error handling for each step
+
+### Fixed
+- **API Compliance**: Fixed implementation to follow official Fireblocks documentation
+- **Endpoint Usage**: Corrected API endpoint usage for vault wallet creation
 
 ## [1.0.0] - 2025-01-06
 
