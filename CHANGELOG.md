@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.1] - 2025-01-06
+
+### Fixed
+- **JWT Token Signing**: Fixed JWT token signing to properly handle URI paths with leading slash
+- **Authentication Issues**: Resolved "Token signed for incorrect url" errors in API requests
+- **URL Path Normalization**: Improved path handling for proper Fireblocks API authentication
+
 ## [1.1.0] - 2025-01-06
 
 ### Added

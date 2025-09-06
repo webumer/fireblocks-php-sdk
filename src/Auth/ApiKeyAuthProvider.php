@@ -49,8 +49,11 @@ final class ApiKeyAuthProvider implements IAuthProvider
     {
         $now = time();
         
+        // Ensure the path starts with / for proper JWT signing
+        $uri = '/' . ltrim($path, '/');
+        
         $payload = [
-            'uri' => $path,
+            'uri' => $uri,
             'nonce' => $now,
             'iat' => $now,
             'exp' => $now + 30, // 30 seconds expiration
