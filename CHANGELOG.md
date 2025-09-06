@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.2] - 2025-09-06
+
+### Fixed
+- Fixed AddressesService::generate() to use correct Fireblocks API endpoint
+- Corrected wallet creation to use POST /vault/accounts/{vaultAccountId}/{assetId} instead of incorrect endpoint
+- Resolved 404 errors in wallet creation by using proper API endpoints
+
 ## [1.1.1] - 2025-01-06
 
 ### Fixed

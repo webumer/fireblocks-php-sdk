@@ -33,7 +33,8 @@ final class AddressesService
             'assetId' => $assetId
         ], $options);
 
-        return $this->apiClient->post('vault/accounts/generate_address', $data);
+        // Use the correct Fireblocks API endpoint for generating addresses
+        return $this->apiClient->post("vault/accounts/{$vaultAccountId}/{$assetId}", $data);
     }
 
     /**
